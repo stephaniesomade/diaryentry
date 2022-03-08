@@ -26,7 +26,11 @@ class DiaryEntry
     words = wpm.to_f
     number_of_words = ((words / 60.0) * seconds).floor
     index = number_of_words - 1
+    @contents.slice (@contents.split(" ")[0..index]).join(" ")
     return (@contents.split(" ")[0..index]).join(" ")
+
+
+
 
     
     
